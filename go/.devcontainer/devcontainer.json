@@ -6,17 +6,10 @@
 	"image": "mcr.microsoft.com/devcontainers/base:jammy",
 	"features": {
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
-		"ghcr.io/devcontainers/features/aws-cli:1": {},
 		"ghcr.io/devcontainers/features/go:1": {
 			"version": "1.23"
 		}
 	},
-	"containerEnv": {
-		"AWS_ENDPOINT_URL": "http://localhost:4566",
-		"AWS_DEFAULT_REGION": "us-east-1"
-	},
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [4566, 8080],
 	"postCreateCommand": "./.devcontainer/postCreate.sh",
 	"postAttachCommand": "./.devcontainer/postAttach.sh",
 	"customizations": {
